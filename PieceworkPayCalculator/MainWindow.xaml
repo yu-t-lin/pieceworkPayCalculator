@@ -1,0 +1,36 @@
+﻿<Window x:Name="PiecepayWork" x:Class="PieceworkPayCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PieceworkPayCalculator"
+        mc:Ignorable="d"
+        Title="Piecework Pay Calculator" Height="450" Width="700" MinHeight="450" MinWidth="700" Icon="/PpWIcon.png"
+         >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label x:Name="lblWorkersName" Grid.Column="1" Content="_Worker's Name:" HorizontalAlignment="Left" Margin="71,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="-0.745,-0.471" TabIndex="0"/>
+        <TextBox x:Name="txtWorkersName" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="258" Grid.ColumnSpan="2" TabIndex="1" ToolTip="Enter the Worker's Name"/>
+        <Label x:Name="lblMessagesSent" Grid.Column="1" Grid.Row="1" Content="Messages Sent:" HorizontalAlignment="Left" VerticalAlignment="Center" TabIndex="2" Margin="74,0,0,0"/>
+        <TextBox x:Name="txtMessagesSent" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="258" Grid.ColumnSpan="2" TabIndex="3" ToolTip="Enter the number of texts sent by the worker."/>
+        <Label x:Name="lblWorkersPay" Grid.Column="1" Content="This Worker's Pay: $" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center" TabIndex="4" Margin="51,0,0,0"/>
+        <TextBox x:Name="txtWorkersPay" Grid.Column="2" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="258" Grid.ColumnSpan="2" TabIndex="5" />
+        <Button x:Name="btnCalculate" Content="Calculate" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" RenderTransformOrigin="-0.437,-0.242" TabIndex="6" Height="76" Width="141" Click="btnCalculate_Click"/>
+        <Button x:Name="btnSummary" Grid.Column="1" Content="Summary" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" TabIndex="7" Height="76" Width="141"/>
+        <Button x:Name="btnClear" Grid.Column="2" Content="Clear" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" TabIndex="8" Height="76" Width="141" Click="btnClear_Click"/>
+        <Button x:Name="btnExit" Grid.Column="3" Content="_Exit" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" TabIndex="9" Height="76" Width="141"/>
+
+    </Grid>
+</Window>
